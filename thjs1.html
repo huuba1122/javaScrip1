@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+    }
+</style>
+<body>
+        <button type="button" onclick="showMessage()";>click me1!</button>
+        <div id="messagediv1"></div>
+        <button type="button" onclick="showMessage1()";>click me2!</button>
+        <div id="messagediv2"></div>
+        <button type="button" onclick="showMessage2()";>click me3!</button>
+        <div id="messagediv3"></div>
+        <button type="button" onclick="showMessage3()";>click me4!</button>
+
+
+</body>
+</html>
+<script>
+    function showMessage(){
+        alert("xin chao");
+    }
+    function showMessage1(){
+        document.getElementById("messagediv1").innerHTML="xin chao";
+    }
+   function showMessage2(){
+       document.write("xin chao")
+   }
+   function showMessage3(){
+        console.log("xinchao")
+   }
+
+</script>
