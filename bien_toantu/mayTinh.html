@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ung dung may tinh</title>
+</head>
+<style>
+    body{
+        margin: 50px 50px;
+    }
+    table, th, td{
+        border-collapse: collapse;
+        border: 1px solid black;
+    }
+</style>
+<body>
+    <table>
+        <tr>
+            <th colspan="4">Caculator</th>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="number" id="number_1"></td>
+            <td colspan="2"><input type="number" id="number_2"></td>
+        </tr>
+        <tr>
+            <td><button onclick="cong()">Addition(+)</button></td>
+            <td><button onclick="tru()">Subtraction(-)</button></td>
+            <td><button onclick="nhan()">Multiplication(X)</button></td>
+            <td><button onclick="chia()">Division(/)</button></td>
+        </tr>
+        <tr>
+            <td>Result</td>
+            <td id="result" colspan="3"></td>
+
+        </tr>
+    </table>
+
+    <script>
+
+
+        function cong(){
+            var num1 = +document.getElementById('number_1').value;
+            var num2= +document.getElementById('number_2').value;
+            tong = num1 + num2;
+            document.getElementById('result').innerText = 'Tong = '+ tong;
+        }
+        function tru(){
+            var num1 = +document.getElementById('number_1').value;
+            var num2= +document.getElementById('number_2').value;
+            hieu = num1 - num2;
+            document.getElementById('result').innerText = 'Hieu = '+ hieu;
+        }
+        function nhan(){
+            var num1 = +document.getElementById('number_1').value;
+            var num2= +document.getElementById('number_2').value;
+            tich = num1 * num2;
+            document.getElementById('result').innerText = 'Tich = '+ tich;
+        }
+        function chia(){
+            var num1 = +document.getElementById('number_1').value;
+            var num2= +document.getElementById('number_2').value;
+            thuong = num1/num2;
+            document.getElementById('result').innerText = 'Tich = '+ thuong;
+        }
+    </script>
+</body>
+</html>

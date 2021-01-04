@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài tập biến kiểu dữ liệu</title>
+</head>
+<style>
+    body{
+        margin: 50px;
+    }
+        table{
+            text-align: right;
+            color: blue;
+            background-color: palegoldenrod;
+            table-layout: fixed;
+
+        }
+        input{
+            background-color: white;
+            color: red;
+        }
+        .div4{
+            width: 250px;
+            height: 180px;
+            background-color: lightcyan;
+        }
+</style>
+<body>
+        <h1>Bảng điểm</h1>
+        <div class="div1">
+        <table border="1px" style="border-collapse: collapse">
+            <tr>
+                <td>Môn học</td>
+                <td>Điểm</td>
+            </tr>
+            <tr>
+                <td>vật lý</td>
+                <td ><input type="text" id="vl"></td>
+            </tr>
+            <tr>
+                <td>Hóa học</td>
+                <td><input type="text" id="hh"></td>
+            </tr>
+            <tr>
+                <td>Sinh học</td>
+                <td><input type="text" id="sh" onkeyup="diem()"></td>
+            </tr>
+            <tr>
+                <td>Điểm trung bình</td>
+                <td><input type="text" id="tb" ></td>
+            </tr>
+            <tr>
+                <td>tổng</td>
+                <td><input type="text" id="tong"></td>
+            </tr>
+        </table>
+    </div>
+        <div><h1>chuyển nhiệt độ</h1></div>
+        <div class="div2">
+            nhập giá trị độ C:
+            <br>
+            <input type="text" id="doC" onkeyup="nhietDo()">
+            <br>
+            Giá trị Độ F: <br>
+            <input type="text" id="doF">
+
+        </div>
+        <div><h1>tính chu vi và diện tích hình tròn</h1></div>
+        <div class=" div4">
+            <div style="padding: 20px 20px">
+                Bán kính R(m):
+                <br>
+                <input type="text" id="R" onkeyup="duongTron()" placeholder="nhập vào giá trị bán kính">
+                <br>
+                Chu vi:
+                <br><input type="text" id="cV">
+                <br>
+                Diện tich:
+                <br>
+                <input type="text" id="dT">
+            </div>
+        </div>
+</body>
+    <script>
+        function diem(){
+            var vl = document.getElementById('vl').value;
+            var hh = document.getElementById('hh').value;
+            var sh = document.getElementById('sh').value;
+            var tong = parseInt(vl)+parseInt(hh)+parseInt(sh);
+            var tb = tong/3;
+            document.getElementById('tong').value = tong;
+            document.getElementById('tb').value = tb;
+        }
+        function nhietDo(){
+            var nd= document.getElementById('doC').value;
+            var doC = parseInt(nd);
+            var doF = 5*(doC-32)/9;
+            document.getElementById('doF').value = doF;
+        }
+        function duongTron(){
+            const pi = 3.14;
+            var R = document.getElementById('R').value;
+            var cv = pi*parseInt(R)*2;
+            var dt = cv*parseInt(R)/2;
+            document.getElementById('cV').value= cv;
+            document.getElementById('dT').value=dt;
+
+        }
+    </script>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đổi tiền tệ</title>
+</head>
+<style>
+    body{
+        margin: 50px;
+    }
+        div{
+            width: 600px;
+            height: 80px;
+            background-color: blue;
+            text-align: center;
+
+        }
+        h1{
+            padding-top: 20px;
+            color: white;
+        }
+        .divtt{
+            width: 560px;
+            height: 100px;
+            background-color: palegoldenrod;
+            padding: 20px 20px;
+        }
+        table{
+            width: 100%;
+        }
+</style>
+<body style="font-family:arial;background-color:lavender">
+        <div>
+            <h1>Nhập số tiền và chọn loại tiền cần đổi</h1>
+        </div>
+        <div class="divtt">
+            <table>
+                <tr>
+                    <th width="30%">Amount</th>
+                    <th width="23%">From Currency</th>
+                    <th width="22%">to Currency</th>
+                </tr>
+                <tr>
+                    <td><input type="text" onkeyup="convert()" id="soTien_to"></td>
+                    <td>
+                        <select name="" id="fromt_to" class="aaaaa">
+                            <option value="21.24" class="currency__cv-option">(₩) Won Hàn Quốc (KRW)
+                                <!--                                <span class="option_contry">(₩) Won Hàn Quốc (KRW)</span>-->
+                            </option>
+                            <option value="3541.54" class="currency__cv-option">(¥) Yuan Trung Quốc (RMB)
+                                <!--                                <span class="option_contry">(¥) Yuan Trung Quốc (RMB)</span>-->
+                            </option>
+                            <option value="23088" class="currency__cv-option">($) Dola Mỹ (USD)
+                                <!--                                <span class="option_contry">($) Dola Mỹ (USD)</span>-->
+                            </option>
+                            <option value="223.87" class="currency__cv-option">Yên Nhật Bản (JPY)
+                                <!--                                <span class="option_contry">(¥) Yên Nhật Bản (JPY)</span>-->
+                            </option>
+                            <option value="31497" class="currency__cv-option">(£) Bảng Anh (GBP)
+                                <!--                                <span class="option_contry">(£) Bảng Anh (GBP)</span>-->
+                            </option>
+                            <option value="1" class="currency__cv-option">(₫) Đồng Việt Nam (VND)
+                                <!--                                <span class="option_contry">(₫) Đồng Việt Nam (VND)</span>-->
+                            </option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="" id="to_to" class="aaaaa">
+                            <option value="21.24" class="currency__cv-option">(₩) Won Hàn Quốc (KRW)
+                                <!--                                <span class="option_contry">(₩) Won Hàn Quốc (KRW)</span>-->
+                            </option>
+                            <option value="3541.54" class="currency__cv-option">(¥) Yuan Trung Quốc (RMB)
+                                <!--                                <span class="option_contry">(¥) Yuan Trung Quốc (RMB)</span>-->
+                            </option>
+                            <option value="23088" class="currency__cv-option">($) Dola Mỹ (USD)
+                                <!--                                <span class="option_contry">($) Dola Mỹ (USD)</span>-->
+                            </option>
+                            <option value="223.87" class="currency__cv-option">Yên Nhật Bản (JPY)
+                                <!--                                <span class="option_contry">(¥) Yên Nhật Bản (JPY)</span>-->
+                            </option>
+                            <option value="31497" class="currency__cv-option">(£) Bảng Anh (GBP)
+                                <!--                                <span class="option_contry">(£) Bảng Anh (GBP)</span>-->
+                            </option>
+                            <option value="1" class="currency__cv-option">(₫) Đồng Việt Nam (VND)
+                                <!--                                <span class="option_contry">(₫) Đồng Việt Nam (VND)</span>-->
+                            </option>
+                        </select>
+                    </td>
+<!--                    <td><button onclick="convert()" id="CV">Convert</button></td>-->
+                </tr>
+            </table>
+
+                <input type="number" id="result_to">
+
+
+<!--            <p id="result" style="color: blue"></p>-->
+        </div>
+
+</body>
+<script>
+        function convert(){
+            var tien = document.getElementById('soTien_to').value;
+            var fromt= document.getElementById('fromt_to').value;
+            var to = document.getElementById('to_to').value;
+            var result = parseInt(tien)*fromt/to;
+            document.getElementById('result_to').value = result;
+
+        }
+</script>
+</html>
